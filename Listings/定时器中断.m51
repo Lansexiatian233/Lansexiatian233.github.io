@@ -1,0 +1,114 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/02/2022  19:07:03  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\定时器中断 PRINT (.\Listings\定时器中断.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\定时器中断 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000BH     UNIT         ?DT?MAIN
+            IDATA   0013H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0092H     0011H     UNIT         ?PR?DISPLAY?MAIN
+            CODE    00A3H     0010H     UNIT         ?C_INITSEG
+            CODE    00B3H     0009H     UNIT         ?PR?INITEX?MAIN
+            CODE    00BCH     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    00C4H     0003H     UNIT         ?PR?EX_ISR?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\定时器中断 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?INITEX?MAIN
+  +--> ?PR?DISPLAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\定时器中断 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/02/2022  19:07:03  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:00C4H         PUBLIC        ex_isr
+  C:00B3H         PUBLIC        initex
+  C:00BCH         PUBLIC        main
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:0008H         PUBLIC        num
+  B:00B0H.0       PUBLIC        ex
+  D:0009H         PUBLIC        s
+  C:0092H         PUBLIC        display
+  -------         PROC          INITEX
+  C:00B3H         LINE#         6
+  C:00B3H         LINE#         7
+  C:00B3H         LINE#         8
+  C:00B5H         LINE#         9
+  C:00B7H         LINE#         10
+  C:00B9H         LINE#         11
+  C:00BBH         LINE#         12
+  -------         ENDPROC       INITEX
+  -------         PROC          DISPLAY
+  C:0092H         LINE#         13
+  C:0092H         LINE#         14
+  C:0092H         LINE#         15
+  C:009AH         LINE#         16
+  C:00A0H         LINE#         17
+  C:00A0H         LINE#         18
+  C:00A2H         LINE#         19
+  C:00A2H         LINE#         20
+  -------         ENDPROC       DISPLAY
+  -------         PROC          MAIN
+  C:00BCH         LINE#         21
+  C:00BCH         LINE#         22
+  C:00BCH         LINE#         23
+  C:00BFH         LINE#         24
+  C:00BFH         LINE#         25
+  C:00BFH         LINE#         26
+  C:00C2H         LINE#         27
+  -------         ENDPROC       MAIN
+  -------         PROC          EX_ISR
+  C:00C4H         LINE#         30
+  C:00C4H         LINE#         32
+  C:00C6H         LINE#         33
+  -------         ENDPROC       EX_ISR
+  -------         ENDMOD        MAIN
+
+Program Size: data=20.0 xdata=0 code=199
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\定时器中断" 
+PRINT(".\Listings\定时器中断.m51")
